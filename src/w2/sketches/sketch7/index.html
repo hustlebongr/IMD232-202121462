@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>봉하영 W2 Sketch2</title>
+    <title>봉하영 W2 Sketch7</title>
     <link
       href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
       rel="stylesheet"
@@ -11,31 +11,29 @@
     <link rel="stylesheet" href="../../../../style/style.css" />
     <link rel="stylesheet" href="../../../../plugin/prism/prism.css" />
     <script src="../../../../plugin/prism/prism.js" defer></script>
-    <script>
-      alert('알고계세요 샌즈?');
-      let aaaa;
-      aaaa = prompt('엄청 어렵고 재밌는 게임의 이름은?', '샌즈');
-      let confirmVal = confirm(
-        '정말 재밌는 게임의 이름은 ' + aaaa + '가 맞습니까?'
-      );
-      if (confirmVal == true) {
-        alert('오 좀아는녀석인가? ' + aaaa + ' 엄청 어렵습니다.');
-      }
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@latest/lib/p5.min.js"></script>
+    <script src="./script/sketch.js" defer></script>
   </head>
   <body>
     <div class="viewport">
       <header>
         <section>
           <div class="container">
-            <h1>봉하영 W2 Sketch2</h1>
-            <h5>lncline Script</h5>
-            <h7>Script의 위치(head 내부)와 알람 관련 함수 function</h7>
-            <h8>date line 참조</h8>
+            <h1>봉하영 W2 Sketch7</h1>
+            <h5>Placing the p5 Canvas</h5>
+            <h7>캔버스의 색상과 위치 조정</h7>
+            <br />
+            <h8>js안에 캔버스의 변수를 넣었다.</h8>
           </div>
         </section>
       </header>
-      <main></main>
+      <main>
+        <section>
+          <div class="container">
+            <div id="canvas-goes-here"></div>
+          </div>
+        </section>
+      </main>
       <footer>
         <section>
           <div class="container">
@@ -44,7 +42,11 @@
             <pre
               class="line-numbers"
               data-src="./index.html"
-              data-line="14 - 24"
+              data-downlord-link=""></pre>
+            <h6>sketch.js</h6>
+            <pre
+              class="line-numbers"
+              data-src="./script/sketch.js"
               data-downlord-link=""></pre>
           </div>
         </section>

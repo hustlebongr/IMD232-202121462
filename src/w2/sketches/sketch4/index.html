@@ -5,30 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>봉하영 W2 Sketch4</title>
     <link
-      href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
-      rel="stylesheet"
-      type="text/css" />
+    href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
+    rel="stylesheet"
+    type="text/css" />
     <link rel="stylesheet" href="../../../../style/style.css" />
-    <link rel="stylesheet" href="../../../../plugin/prism/prism.css" />
+    <link rel="stylesheet" href="../../../../plugin/prism/prism.css">
     <script src="../../../../plugin/prism/prism.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/p5@latest/lib/p5.min.js"></script>
-<script src="/.script/sketch.js" defer></script> 
-</head>
+    <!-- <script>
+      let gameName = prompt("정말 재밌는 게임의 이름은 무엇입니까?","샌즈");
+      let isUserNameCorrect = confirm(
+        "재밌는 게임의 이름이 " + gameName + "이 맞습니까?");
+        if(isUserNameCorrect == true) {
+          document.getElementById("user-name-goes-here").textContent = "정말 재밌습니다! " + gameName + ' 짱!'
+        }</script> -->
   <body>
-    <div class="viewport">
-      <main>
-    
-      </main>
-      <footer>
-        <section>
-          <div class="container">
-            <h6>index.html</h6>
-            <pre
-              class="line-numbers"
-              data-src="./index.html"
-              data-download-link></pre>
-        </section>
-      </footer>
-    </div>
+   <div class="viewport">
+    <header>
+      <section>
+        <div class="container">
+          <h1>봉하영 W2 Sketch4</h1>
+          <h5>Location of the script</h5>
+            <h7>코드의 위치가 어디에 있어야 참조가 실행이 될까?</h7><br>
+            <h8>헤드 있는데 말고 아래에 있어야 실행이 됩니다.</h8>
+        </div>
+      </section>
+    </header>
+    <main>
+      <section>
+        <div class="container">
+          <h2 id="user-name-goes-here"></h2>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section>
+        <div class="container">
+          <h2>코드</h2>
+          <h6>index.html</h6>
+          <pre
+            class="line-numbers"
+            data-src="./index.html"
+            data-downlord-link=""></pre>
+        </div>
+      </section>
+    </footer>
+   </div>
+   <script>
+    let gameName = prompt("정말 재밌는 게임의 이름은 무엇입니까?","샌즈");
+    let isUserNameCorrect = confirm(
+      "재밌는 게임의 이름이 " + gameName + "이 맞습니까?");
+      if(isUserNameCorrect == true) {
+        document.getElementById("user-name-goes-here").textContent = "정말 재밌습니다! " + gameName + ' 짱!'
+      }
+      </script>
   </body>
 </html>
