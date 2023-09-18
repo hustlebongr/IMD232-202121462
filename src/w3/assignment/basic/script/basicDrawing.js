@@ -11,95 +11,78 @@ function draw() {
   background(140);
   //맨위
   fill(200);
-  rect(0, 0, width, height / 30);
+  rect(0, 0, 1000, 30);
   //벽 background
   //바닥
-  rect(0, (height * 5) / 6, width, height / 2);
+  rect(0, 700, 1000, 50);
   //조명
   fill(255, 255, 255, 20);
-  circle(width / 2, (height * 58) / 120, width / 15, width / 15);
+  circle(500, 280, 100, 100);
   fill(255, 255, 255, 30);
-  circle(width / 2, (height * 58) / 120, width / 15 - 10, width / 15 - 10);
+  circle(500, 280, 90, 90);
   fill(255, 255, 255, 50);
-  circle(width / 2, (height * 58) / 120, width / 15 - 20, width / 15 - 20);
+  circle(500, 280, 80, 80);
   fill(255, 255, 255, 70);
-  circle(width / 2, (height * 58) / 120, width / 15 - 30, width / 15 - 30);
+  circle(500, 280, 70, 70);
   fill(255, 255, 255, 90);
-  circle(width / 2, (height * 58) / 120, width / 15 - 40, width / 15 - 40);
+  circle(500, 280, 70, 70);
 
   //조명 선
   fill(60);
-  rect(width / 2, 0, width / 200, (height * 58) / 120);
+  rect(500, 0, 5, 250);
   //조명 갓
   rectMode(CENTER);
   fill(60);
-  rect(width / 2, (height * 55) / 120, width / 10, height / 20);
+  rect(500, 250, 150, 70, 10, 10, 10, 10);
   //바닥걸레받이
   rectMode(CORNER);
   fill(80);
-  rect(0, (height * 5) / 6, width, 10);
+  rect(0, 550, 1000, 10);
 
   //왼쪽 창문
   fill('#636464');
-  rect(0, height / 6, (width * 18) / 120, (height * 67) / 120);
+  rect(0, 150, 150, 300);
   //창문 내부
   fill('#5AC5FA');
-  rect(0, (height * 225) / 1200, (width * 160) / 1200, (height * 180) / 1200);
+  rect(0, 170, 130, 220);
   //창문 들판
   fill('#5CBB69');
-  rect(0, height / 2, (width * 160) / 1200, (height * 200) / 1200);
+  rect(0, 330, 130, 50);
   //집지붕
   fill('#5A5A5F');
-  rect(0, (height * 400) / 1200, (width * 160) / 1200, (height * 80) / 1200);
+  rect(0, 240, 130, 30);
   //집앞면
   fill('#C8C8E8');
-  rect(0, (height * 475) / 1200, (width * 160) / 1200, (height * 125) / 1200);
+  rect(50, 270, 80, 60);
   //집옆면1
   fill('#DCDCFC');
-  rect(0, (height * 475) / 1200, (width * 80) / 1200, (height * 125) / 1200);
+  rect(0, 270, 50, 60);
   //집 옆면
   fill('#DCDCFC');
-  triangle(
-    0,
-    (height * 400) / 1200,
-    0,
-    (height * 475) / 1200,
-    (width * 80) / 1200,
-    (height * 475) / 1200
-  );
+  triangle(0, 240, 0, 270, 50, 270);
   //굴뚝
   fill(60);
-  rect(
-    (width * 40) / 1200,
-    (height * 380) / 1200,
-    (width * 30) / 1200,
-    (height * 20) / 1200
-  );
+  rect(40, 220, 30, 20);
   //집 창문
   fill('#BE85D2');
-  rect(0, (height * 480) / 1200, (width * 15) / 1200, (height * 40) / 1200);
+  rect(0, 275, 15, 40);
 
   //창문 가로지르기
   fill('#636464');
-  rect(0, (height * 520) / 1200, (width * 160) / 1200, (height * 20) / 1200);
+  rect(0, 280, 150, 10);
 
   //창문 받이
   fill('#787878');
-  rect(0, (height * 800) / 1200, (width * 200) / 1200, (height * 20) / 1200);
+  rect(0, 380, 170, 15);
   //창문받이 그림자
   fill(60);
-  rect(0, (height * 820) / 1200, (width * 18) / 120, (height * 20) / 1200);
+  rect(0, 395, 150, 10);
   //커튼 봉
   fill(60);
-  rect(0, (height * 220) / 1200, (width * 220) / 1200, (height * 10) / 1200);
+  rect(0, 170, 170, 5);
   //커튼 봉 동그리
   fill(60);
-  circle(
-    (width * 220) / 1200,
-    (height * 220) / 1200 + (height * 5) / 1200,
-    (width * 20) / 1200,
-    (width * 20) / 1200
-  );
+  circle(173, 173, 10, 10);
   //오른쪽 액자 테두리
   fill('#C7C7C7');
   rect(820, 240, 170, 190);
