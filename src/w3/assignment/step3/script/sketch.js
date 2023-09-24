@@ -23,14 +23,20 @@ function draw() {
   background('white');
   //원의 중심점으로부터 마우스로 향하는 벡터
   let mouseVector = createVector(mouseX - pos.x, mouseY - pos.y);
-  acc = mouseVector.copy();
+
   if (mouseIsPressed) {
-    //벡터 노말라이즈
-    acc.normalize();
-    // 가속도 크기 조절
-    acc.mult(0.1);
-    //속도에 마우스를 향하는 가속도 더하기
+    followingMouse = false; // 마우스 클릭 시 원이 멀어지도록 설정
   } else {
+    followingMouse = true; // 클릭하지 않으면 원이 마우스를 따라오도록 설정
+  }
+
+  if (followingMouse) {
+    // 클릭하지 않으면 원이 마우스를 따라감
+    acc = mouseVector.copy();
+    acc.normalize();
+    acc.mult(0.1);
+  } else {
+    // 클릭 시 가속도를 0으로 설정하여 멀어짐
     acc.mult(0);
   }
 
