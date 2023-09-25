@@ -16,6 +16,7 @@ function setup() {
   pos = createVector(width / 2, height / 2);
   vel = createVector(0, 0);
   acc = createVector(0, 0);
+  vel.limit(5);
 }
 
 function draw() {
@@ -34,13 +35,15 @@ function draw() {
     // 클릭하지 않으면 원이 마우스를 따라감
     acc = mouseVector.copy();
     acc.normalize();
-    acc.mult(0.1);
+    acc.mult(0.5);
   } else {
     // 클릭 시 가속도를 0으로 설정하여 멀어짐
     acc.mult(0);
   }
 
   vel.add(acc);
+  vel.limit(20);
+  console.log('vel', vel);
   //위치는 위에 업데이트 된 속도를 더함 (업데이트)
   pos.add(vel);
 
