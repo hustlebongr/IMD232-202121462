@@ -67,7 +67,7 @@ function update() {
 
   //빨간색 라인
   posToAcc = p5.Vector.sub(vel, pos);
-  posToAcc.mult(0);
+  posToAcc.mult(0.1);
   translate(pos.x, pos.y);
   stroke('red');
   line(0, 0, pos.x, pos.y);
