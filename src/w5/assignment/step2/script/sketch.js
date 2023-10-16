@@ -4,7 +4,7 @@ let gravity;
 function setup() {
   setCanvasContainer('canvas', 2, 1, true);
 
-  // 세 개의 진자를 만듭니다.
+  // 세 개의 진자
   for (let i = 0; i < 2; i++) {
     pendulums.push(
       new Pendulum(width / 2, 10, height / 3, (TAU / 360) * 45, 25)
@@ -18,7 +18,7 @@ function setup() {
 function draw() {
   background(255);
 
-  // 중첩된 for 루프를 사용하여 진자들을 연결합니다.
+  // 중첩된 for 루프
   for (let i = 0; i < pendulums.length - 1; i++) {
     pendulums[i].applyGravity(gravity);
     pendulums[i].update();
