@@ -9,7 +9,7 @@ class Particle {
     this.acc = createVector(0, 0);
     this.rad = 10;
     this.lifeSpan = 60;
-    this.color = color(random(360), random(100, 200), 50, 10);
+    this.color = color(random(360), random(10, 200), 50);
     this.previousPos = this.pos.copy();
   }
   applyForce(force) {

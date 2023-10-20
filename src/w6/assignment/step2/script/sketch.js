@@ -9,7 +9,7 @@ function setup() {
 }
 
 function draw() {
-  background(255);
+  background('beige');
   for (let i = 0; i < emitters.length; i++) {
     emitters[i].update(gravity);
     emitters[i].display();
