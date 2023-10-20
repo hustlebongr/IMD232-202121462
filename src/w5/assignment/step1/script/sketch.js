@@ -1,6 +1,6 @@
 const stripeNum = 8;
 const stripeNum2 = 8;
-let stripeGap = 30;
+let clockGap = 30;
 let clockHandAngles = []; // 시계 바늘의 초기 각도 배열
 
 function setup() {
@@ -18,7 +18,7 @@ function draw() {
   noStroke();
 
   // 창 크기에 반응하여 stripeGap을 조절
-  stripeGap = min(width, height) / 10;
+  clockGap = min(width, height) / 10;
 
   // 회전 각도 증가분 설정
   const rotationStep = radians(15);
@@ -27,23 +27,28 @@ function draw() {
     for (let b = 0; b < stripeNum2; b++) {
       noFill();
       stroke(frameCount % 255, 100, 200);
+      //  if (a % 2 === 0) {
+      //     stroke(b % 2 === 0 ? 255 : 255, 0, 0);
+      //   } else {
+      //     stroke(b % 2 === 0 ? 0 : 0, 0, 255);
+      //   }
       strokeWeight(1);
 
       // 회전 각도 계산
       const rotationAngle = a * rotationStep + clockHandAngles[b];
 
-      let x = map(a, 0, stripeNum - 1, stripeGap, width - stripeGap);
-      let y = map(b, 0, stripeNum2 - 1, stripeGap, height - stripeGap);
+      let x = map(a, 0, stripeNum - 1, clockGap, width - clockGap);
+      let y = map(b, 0, stripeNum2 - 1, clockGap, height - clockGap);
 
       if (a % 2 == 0) {
-        ellipse(x, y, stripeGap);
+        ellipse(x, y, clockGap);
         fill(255);
       } else {
-        ellipse(x, y, stripeGap);
+        ellipse(x, y, clockGap);
         fill(255);
       }
 
-      let handSize = stripeGap * 0.4;
+      let handSize = clockGap * 0.4;
       let handX = x + cos(rotationAngle) * handSize;
       let handY = y + sin(rotationAngle) * handSize;
       line(x, y, handX, handY);
@@ -54,7 +59,7 @@ function draw() {
       let circleX = x + cos(rotationAngle) * handSize;
       let circleY = y + sin(rotationAngle) * handSize;
 
-      ellipse(circleX, circleY, stripeGap * 0.25);
+      ellipse(circleX, circleY, clockGap * 0.25);
     }
   }
 

@@ -9,6 +9,8 @@ class Emitter {
       new Ball(
         this.emittingPos.x,
         this.emittingPos.y,
+        (TAU / 360) * -90 + random((TAU / 360) * -30, (TAU / 360) * 30),
+        random(2, 15),
         random(1, 5),
         random(360),
         100,
@@ -31,9 +33,15 @@ class Emitter {
   }
 
   update() {
-    this.balls.forEach((each) => {
-      each.update();
-    });
+    // this.balls.forEach((each) => {
+    //   each.update();
+    // });
+    for (let index = this.balls.length - 1; index >= 0; index--) {
+      this.balls[index].update();
+      if (this.balls[index].isDead()) {
+        this.balls.splice(index, 1);
+      }
+    }
   }
 
   display() {
