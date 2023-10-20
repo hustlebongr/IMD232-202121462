@@ -2,6 +2,7 @@ class Emitter {
   constructor(x, y) {
     this.particles = [];
     this.pos = createVector(x, y);
+    this.color = color(random(360), random(100, 200), 50, 10);
   }
 
   addParticle() {
@@ -10,8 +11,8 @@ class Emitter {
     for (let i = 0; i < numParticles; i++) {
       const angle = i * angleIncrement;
       const p = new Particle(this.pos.x, this.pos.y);
-      // 파티클을 사방으로 퍼지게 하기 위해 초기 속도 설정
-      p.vel.set(cos(angle) * 5, sin(angle) * 5); // 5는 초기 속도
+      // 파티클을 사방으로 퍼지게 하기 위해
+      p.vel.set(cos(angle) * 6, sin(angle) * 6);
       this.particles.push(p);
     }
   }
