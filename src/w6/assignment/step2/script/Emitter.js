@@ -2,7 +2,7 @@ class Emitter {
   constructor(x, y) {
     this.particles = [];
     this.pos = createVector(x, y);
-    this.color = color(random(360), random(100, 200), 50, 10);
+    this.color = color(random(360), 100, 50, 50);
   }
 
   addParticle() {
