@@ -1,6 +1,6 @@
 let emitter;
 let emitters = [];
-let gravity = 0.1;
+let gravity = 0;
 
 function setup() {
   setCanvasContainer('canvas', 3, 2, true);

@@ -6,7 +6,7 @@ class Emitter {
   }
 
   addParticle() {
-    const numParticles = 100 + random(0, 10); // 파티클의 개수 100개 이상
+    const numParticles = 60; // 파티클의 개수
     const angleIncrement = TAU / numParticles; // 파티클 간의 각도 간격
     for (let i = 0; i < numParticles; i++) {
       const angle = i * angleIncrement;

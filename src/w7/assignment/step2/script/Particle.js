@@ -3,7 +3,7 @@ class Particle {
     this.pos = createVector(x, y);
     // 파티클 질량을 10으로 설정
     this.mass = 10;
-    this.vel = createVector();
+    this.vel = createVector(1, 0);
     // 초기 속도를 19에서 20 사이의 랜덤값으로 설정
     this.vel.rotate((TAU / 360) * random(19, 20));
     this.acc = createVector(0, 0);
@@ -26,8 +26,7 @@ class Particle {
   display() {
     noStroke();
     fill(this.color, this.lifeSpan);
-    // 투명도 설정
-    let transparency = map(this.lifeSpan, 0, 100, 0, 255);
+    let transparency = map(this.lifeSpan, 0, 60, 0, 255);
     fill(red(this.color), green(this.color), blue(this.color), transparency);
     ellipse(this.pos.x, this.pos.y, this.rad * 2);
   }
