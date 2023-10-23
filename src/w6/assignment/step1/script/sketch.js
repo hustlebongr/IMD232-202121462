@@ -7,8 +7,9 @@ function setup() {
   //위에 있는 파티클을 넣는것. Particle(width / 2, 20)>> 너비 중간 , 20 쯤에 생성
   //particle = new Particle(width / 2, 20);
   gravity = createVector(0, 0.1);
+  colorMode(HSL, 360, 100, 100, 100);
 
-  background(255);
+  background('beige');
 }
 
 function draw() {
