@@ -1,23 +1,21 @@
-let particle;
-//중력에 해당하는 변수
-let gravity = 0;
+let vehicle;
+let mVec;
 
 function setup() {
   setCanvasContainer('canvas', 3, 2, true);
-  //위에 있는 파티클을 넣는것. Particle(width / 2, 20)>> 너비 중간 , 20 쯤에 생성
-  particle = new Particle(width / 2, 20);
-  gravity = createVector(0, 0.1);
+  // constructor(x, y, mass, rad, speedMx, forceMx)
+  vehicle = new Vehicle(width / 2, height / 2, 1, 20, 10, 0.1);
+
+  mVec = createVector(); //마우스 쫒아오는 벡터 만들기
 
   background(255);
 }
 
 function draw() {
-  //   console.log(particle.isDead());
-  if (particle.isDead()) {
-    particle = new Particle(width / 2, 20);
-  }
-  particle.applyForce(gravity);
-  particle.update();
+  mVec.set(mouseX, mouseY); //마우스 쫒아오는 벡터 만들기
+
+  vehicle.seek(mVec);
+  vehicle.update();
   background(255);
-  particle.display();
+  vehicle.display();
 }
