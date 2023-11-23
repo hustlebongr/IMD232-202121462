@@ -16,10 +16,7 @@ function setup() {
       const x = w * col;
       const y = h * row;
       let state = random() < 0.5;
-      const idx = colNum * row + col;
-      cells.push(new Cell(x, y, w, h, state, idx));
-      newCell.addfirends(cells);
-      cells.push(newcell);
+      cells.push(new Cell(x, y, w, h, state));
     }
   }
 
